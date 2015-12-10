@@ -1,0 +1,17 @@
+{
+    "name": "ws",
+    "description": "OpsWorks recipe run-list for the Web service layer",
+    "default_attributes": {
+
+    },
+    "run_list": [
+        "recipe[hostname]",
+        "recipe[ubuntu]",
+        "recipe[dependencies]",
+        "recipe[chef-nodejs]",
+        "recipe[test-server::pm2_install]",
+        "recipe[test-server::create_deploy_user]"
+    ],
+    "chef_type": "role",
+    "json_class": "Chef::Role"
+}
