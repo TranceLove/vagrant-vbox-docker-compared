@@ -1,0 +1,17 @@
+{
+    "name": "mongodb",
+    "description": "OpsWorks recipe run-list for the MongoDB layer",
+    "default_attributes": {
+
+    },
+    "run_list": [
+        "recipe[hostname]",
+        "recipe[ubuntu]",
+        "recipe[dependencies]",
+        "recipe[chef-nodejs]",
+        "recipe[mongodb::mongodb_org_repo]",
+        "recipe[mongodb]"
+    ],
+    "chef_type": "role",
+    "json_class": "Chef::Role"
+}
