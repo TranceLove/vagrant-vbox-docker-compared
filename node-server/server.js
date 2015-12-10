@@ -1,0 +1,10 @@
+"use strict"
+
+const http = require("http")
+
+let server = http.createServer(function(req, res){
+    res.writeHead(200)
+    res.end("OK")
+})
+
+server.listen(8999)

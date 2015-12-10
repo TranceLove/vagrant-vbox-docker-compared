@@ -1,0 +1,14 @@
+{
+    "lsb": {
+        "codename": "trusty"
+    },
+    "ubuntu": {
+        "archive_url": "http://archive.ubuntu.com/ubuntu"
+    },
+    "mongodb": {
+		"default_init_name": "mongod",
+        "host": "mongodb",
+        "port": "27017",
+        "database": "nodeapp"
+    }
+}
