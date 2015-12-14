@@ -42,7 +42,7 @@ Read Dockerfile.mopngodb and Dockerfile.ws for details.
  3. Make sure you can run `docker` without root permission
  4. Install Chef development kit
  5. `berks install && berks vendor cookbooks`
- 4 `vagrant up mongodb ws1 --provider=docker --no-parallel`
+ 6. `vagrant up mongodb ws1 --provider=docker --no-parallel`
 
 To login into the containers, use `docker ps` to locate your container's name,
 then say
