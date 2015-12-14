@@ -11,6 +11,27 @@ To speed up time on setting up the development environment, we are studying the
 efforts required to migrate from VirtualBox-based to a Docker-based setup. Hence
 come to this repository.
 
-Master branch will only carry the README file (what you are reading), recipe for
-the node.js app and the node.js app itself. Please switch between `docker` and
-`vbox` branches to compare the differences between the two workflows.
+#### VirtualBox-based development environment setup
+
+Vagrant with VirtualBox was our initial combination. We also used Puppet (https://puppetlabs.com/)
+in the beginning, and we changed to Chef (https://chef.io) for compatibility with
+AWS Opsworks.
+
+Not much tricks here, everything is quite straightforward. Techniques used here
+are from various sources.
+
+The original idea of making local development environment similar to Opsworks:
+http://pixelcog.com/blog/2014/virtualizing-aws-opsworks-with-vagrant/
+
+(This repository didn't have dependency with AWS cookbooks nor Opsworks agent;
+in our own projects we do however.)
+
+Use of external JSON file to declare deployment environment:
+https://github.com/le0pard/chef-solo-example
+
+The biggest difference of this local development environment with Opsworks however,
+is Opsworks have strict separation of instance lifecycle events, e.g. instance
+setup, instances added to a layer, application deploy/undeploy, and shutdown; we
+don't have these here. It shouldn't put much difference, but you may want to
+take care of this when you write Chef cookbooks that would work on both local
+and Opsworks environments.
