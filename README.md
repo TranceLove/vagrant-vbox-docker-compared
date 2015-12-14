@@ -35,3 +35,14 @@ setup, instances added to a layer, application deploy/undeploy, and shutdown; we
 don't have these here. It shouldn't put much difference, but you may want to
 take care of this when you write Chef cookbooks that would work on both local
 and Opsworks environments.
+
+#### Using the VirtualBox-based development environment
+
+ 1. `vagrant plugin install vagrant-berkshelf vagrant-omnibus`
+ 2. Install Chef development kit
+ 3 `vagrant up mongodb ws1`
+ 4. Wait for the machines to come up
+
+`vagrant ssh <machine name>`
+
+and you will get a bash shell.
