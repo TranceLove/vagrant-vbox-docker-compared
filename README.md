@@ -40,8 +40,10 @@ and Opsworks environments.
 
  1. `vagrant plugin install vagrant-berkshelf vagrant-omnibus`
  2. Install Chef development kit
- 3 `vagrant up mongodb ws1`
+ 3. `vagrant up mongodb ws1`
  4. Wait for the machines to come up
+
+To connect to the running VMs, say
 
 `vagrant ssh <machine name>`
 
